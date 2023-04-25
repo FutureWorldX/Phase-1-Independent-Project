@@ -14,6 +14,8 @@ const clientInsuranceType = document.querySelector("#insuranceType");
 const clientPolicyNum = document.querySelector("#policyNum");
 const clientPolicyStart = document.querySelector("#policyStart");
 const clientPolicyEnd = document.querySelector("#policyEnd");
+const clientform = document.querySelector("#inputForm");
+const clientFormButton = document.querySelector("#formSubmit");
 
 window.onload = () => {
     //intializing the ids and classes from the HTML page
@@ -48,38 +50,43 @@ window.onload = () => {
                            
                         }); //closing the forEach command when listing Policy classes
 
-                        //create a temporary table that fills in with data when submit button is clicked
-                        let tblClientDiv = document.createElement('div');
-                        let tblClient = document.createElement("table");
-
-                        //styling the div which holds the table
-                        tblClientDiv.style.display = "flex";
-                        tblClientDiv.style.margin = "0 auto";
-                        tblClientDiv.style.justifyContent = "center";
-                        tblClientDiv.style.alignItems = "center";
-                        tblClientDiv.style.textAlign = "center";
-                        tblClientDiv.style.overflow = "auto";
-
-                        //styling the table
-                        tblClient.style.fontFamily = "Arial, sans-serif";
-                        tblClient.style.backgroundColor = "mintcream";
-                        tblClient.style.padding = "10px";
-                        tblClient.style.border = "1px solid #ccc";
-                        tblClient.style.borderRadius = "5px";
+                        //event listener for the form submit button
+                        clientFormButton.addEventListener('click', function handleClick(event) {
                         
-                        //appending the new div and table to the HTML document body
-                        tblClientDiv.appendChild(tblClient);
-                        document.body.appendChild(tblClientDiv);
+                            //create a temporary table that fills in with data when submit button is clicked
+                            let tblClientDiv = document.createElement('div');
+                            let tblClient = document.createElement("table");
 
-                        // Insert a row at the end of the table
-                        let newRow = tblClient.insertRow();
+                            //styling the div which holds the table
+                            tblClientDiv.style.display = "flex";
+                            tblClientDiv.style.margin = "0 auto";
+                            tblClientDiv.style.justifyContent = "center";
+                            tblClientDiv.style.alignItems = "center";
+                            tblClientDiv.style.textAlign = "center";
+                            tblClientDiv.style.overflow = "auto";
 
-                        // Insert a cell at the end of the row
-                        let newCell = newRow.insertCell();
+                            //styling the table
+                            tblClient.style.fontFamily = "Arial, sans-serif";
+                            tblClient.style.backgroundColor = "mintcream";
+                            tblClient.style.padding = "10px";
+                            tblClient.style.border = "1px solid #ccc";
+                            tblClient.style.borderRadius = "5px";
+                            
+                            //appending the new div and table to the HTML document body
+                            tblClientDiv.appendChild(tblClient);
+                            document.body.appendChild(tblClientDiv);
 
-                        // Append a text node to the cell
-                        let newText = document.createTextNode('A new Text row has been created.');
-                        newCell.appendChild(newText);
+                            // Insert a row at the end of the table
+                            let newRow = tblClient.insertRow();
+
+                            // Insert a cell at the end of the row
+                            let newCell = newRow.insertCell();
+
+                            // Append a text node to the cell
+                            let newText = document.createTextNode('A new Text row has been created.');
+                            newCell.appendChild(newText);
+
+                        }); //closing the event listener when the form button is clicked
 
                     }// closing when data.length > 0
                 else {
