@@ -14,7 +14,7 @@ const clientInsuranceType = document.querySelector("#insuranceType");
 const clientPolicyNum = document.querySelector("#policyNum");
 const clientPolicyStart = document.querySelector("#policyStart");
 const clientPolicyEnd = document.querySelector("#policyEnd");
-const clientform = document.querySelector("#inputForm");
+const clientForm = document.querySelector("#inputForm");
 const clientFormButton = document.querySelector("#formSubmit");
 
 window.onload = () => {
@@ -76,11 +76,50 @@ window.onload = () => {
                             tblClientDiv.appendChild(tblClient);
                             document.body.appendChild(tblClientDiv);
 
+                            //loading values of HTML Form elements
+                            const clientNameValue = clientName.value;
+                            const companyNameValue = companyName.value;
+                            const clientEmailValue = clientEmail.value;
+                            const clientPhoneValue = clientPhone.value;
+                            const clientPoBoxValue = clientPoBox.value;
+                            const clientAddressValue = clientAddress.value;
+                            const clientCityValue = clientCity.value;
+                            const clientCountyValue = clientCounty.value;
+                            const clientClaimReportDateValue = clientClaimReportDate.value;
+                            const clientInsuranceTypeValue = clientInsuranceType.value;
+                            const clientPolicyNumValue = clientPolicyNum.value;
+                            const clientPolicyStartValue = clientPolicyStart.value;
+                            const clientPolicyEndValue = clientPolicyEnd.value;
+                            const clientFormValue = clientForm.value;
+                            const clientFormButtonValue = clientFormButton.value;
+                            
                             // Insert a row at the end of the table
                             let newRow = tblClient.insertRow();
+                            let rowClientName = tblClient.insertRow();
+                            let rowCompanyName = tblClient.insertRow();
+                            let rowClientEmail = tblClient.insertRow();
+                            let rowClientPhone = tblClient.insertRow();
+                            let rowClientAddress = tblClient.insertRow();
+                            let rowClientCity = tblClient.insertRow();
+                            let rowClientCounty = tblClient.insertRow();
+                            let rowClientInsuranceType = tblClient.insertRow();
+                            let rowClientPolicyNum = tblClient.insertRow();
+                            let rowClientPolicyStart = tblClient.insertRow();
+                            let rowClientPolicyEnd = tblClient.insertRow();
 
                             // Insert a cell at the end of the row
                             let newCell = newRow.insertCell();
+                            let newRowClientName = rowClientName.insertCell();
+                            let newRowCompanyName = rowClientName.insertCell();
+                            let newRowClientEmail = rowClientName.insertCell();
+                            let newRowClientPhone = rowClientName.insertCell();
+                            let newRowClientAddress = rowClientName.insertCell();
+                            let newRowClientCity = rowClientName.insertCell();
+                            let newRowClientCounty = rowClientName.insertCell();
+                            let newRowClientInsuranceType = rowClientName.insertCell();
+                            let newRowClientPolicyNum = rowClientName.insertCell();
+                            let newRowClientPolicyStart = rowClientName.insertCell();
+                            let newRowClientPolicyEnd = rowClientName.insertCell();
 
                             // Append a text node to the cell
                             let newText = document.createTextNode('A new Text row has been created.');
