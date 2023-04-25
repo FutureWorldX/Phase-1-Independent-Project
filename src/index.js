@@ -109,17 +109,17 @@ window.onload = () => {
 
                             // Insert a cell at the end of the row
                             let newCell = newRow.insertCell();
-                            let newRowClientName = rowClientName.insertCell();
-                            let newRowCompanyName = rowClientName.insertCell();
-                            let newRowClientEmail = rowClientName.insertCell();
-                            let newRowClientPhone = rowClientName.insertCell();
-                            let newRowClientAddress = rowClientName.insertCell();
-                            let newRowClientCity = rowClientName.insertCell();
-                            let newRowClientCounty = rowClientName.insertCell();
-                            let newRowClientInsuranceType = rowClientName.insertCell();
-                            let newRowClientPolicyNum = rowClientName.insertCell();
-                            let newRowClientPolicyStart = rowClientName.insertCell();
-                            let newRowClientPolicyEnd = rowClientName.insertCell();
+                            let newCellClientName = rowClientName.insertCell();
+                            let newCellCompanyName = rowCompanyName.insertCell();
+                            let newCellClientEmail = rowClientEmail.insertCell();
+                            let newCellClientPhone = rowClientPhone.insertCell();
+                            let newCellClientAddress = rowClientAddress.insertCell();
+                            let newCellClientCity = rowClientCity.insertCell();
+                            let newCellClientCounty = rowClientCounty.insertCell();
+                            let newCellClientInsuranceType = rowClientInsuranceType.insertCell();
+                            let newCellClientPolicyNum = rowClientPolicyNum.insertCell();
+                            let newCellClientPolicyStart = rowClientPolicyStart.insertCell();
+                            let newCellClientPolicyEnd = rowClientPolicyEnd.insertCell();
 
                             // Append a text node to the cell
                             let newText = document.createTextNode('A new Text row has been created.');
