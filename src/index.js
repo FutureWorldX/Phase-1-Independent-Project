@@ -90,8 +90,6 @@ window.onload = () => {
                             const clientPolicyNumValue = clientPolicyNum.value;
                             const clientPolicyStartValue = clientPolicyStart.value;
                             const clientPolicyEndValue = clientPolicyEnd.value;
-                            const clientFormValue = clientForm.value;
-                            const clientFormButtonValue = clientFormButton.value;
                             
                             // Insert a row at the end of the table
                             let newRow = tblClient.insertRow();
@@ -99,9 +97,11 @@ window.onload = () => {
                             let rowCompanyName = tblClient.insertRow();
                             let rowClientEmail = tblClient.insertRow();
                             let rowClientPhone = tblClient.insertRow();
+                            let rowClientPoBox = tblClient.insertRow();
                             let rowClientAddress = tblClient.insertRow();
                             let rowClientCity = tblClient.insertRow();
                             let rowClientCounty = tblClient.insertRow();
+                            let rowClientClaimReportDate = tblClient.insertRow();
                             let rowClientInsuranceType = tblClient.insertRow();
                             let rowClientPolicyNum = tblClient.insertRow();
                             let rowClientPolicyStart = tblClient.insertRow();
@@ -113,9 +113,11 @@ window.onload = () => {
                             let newCellCompanyName = rowCompanyName.insertCell();
                             let newCellClientEmail = rowClientEmail.insertCell();
                             let newCellClientPhone = rowClientPhone.insertCell();
+                            let newCellClientPoBox = rowClientPoBox.insertCell();
                             let newCellClientAddress = rowClientAddress.insertCell();
                             let newCellClientCity = rowClientCity.insertCell();
                             let newCellClientCounty = rowClientCounty.insertCell();
+                            let newCellClientClaimReportDate = rowClientCounty.insertCell();
                             let newCellClientInsuranceType = rowClientInsuranceType.insertCell();
                             let newCellClientPolicyNum = rowClientPolicyNum.insertCell();
                             let newCellClientPolicyStart = rowClientPolicyStart.insertCell();
@@ -124,6 +126,19 @@ window.onload = () => {
                             // Append a text node to the cell
                             let newText = document.createTextNode('A new Text row has been created.');
                             newCell.appendChild(newText);
+                            newCellClientName.appendChild(clientNameValue);
+                            newCellCompanyName.appendChild(companyNameValue);
+                            newCellClientEmail.appendChild(clientEmailValue);
+                            newCellClientPhone.appendChild(clientPhoneValue);
+                            newCellClientPoBox.appendChild(clientPoBoxValue);
+                            newCellClientAddress.appendChild(clientAddressValue);
+                            newCellClientCity.appendChild(clientCityValue);
+                            newCellClientCounty.appendChild(clientCountyValue);
+                            newCellClientClaimReportDate.appendChild(clientInsuranceTypeValue);
+                            newCellClientInsuranceType.appendChild(clientClaimReportDateValue);
+                            newCellClientPolicyNum.appendChild(clientPolicyNumValue);
+                            newCellClientPolicyStart.appendChild(clientPolicyStartValue);
+                            newCellClientPolicyEnd.appendChild(clientPolicyEndValue);
 
                         }); //closing the event listener when the form button is clicked
 
