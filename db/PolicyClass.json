@@ -1,0 +1,436 @@
+{
+  "policy": [
+	{
+		"id": 1,
+		"ClassOfPolicy": "Advance Payment Bond Security",
+		"ShortClassCode": "SECURITY BOND",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 2,
+		"ClassOfPolicy": "Advanced Payment Bond",
+		"ShortClassCode": "AP/BOND",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 3,
+		"ClassOfPolicy": "All Risks Insurance",
+		"ShortClassCode": "A/RISK",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 4,
+		"ClassOfPolicy": "Bailee Liability",
+		"ShortClassCode": "BAILEE",
+		"CommisionRate": "20.0"
+	},
+	{
+		"id": 5,
+		"ClassOfPolicy": "Bid Security Bond",
+		"ShortClassCode": "BID SEC. BOND",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 6,
+		"ClassOfPolicy": "Bond Insurance Bond",
+		"ShortClassCode": "BOND",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 7,
+		"ClassOfPolicy": "Burglary Insurance",
+		"ShortClassCode": "BURGLARY",
+		"CommisionRate": "20.0"
+	},
+	{
+		"id": 8,
+		"ClassOfPolicy": "Carriers Liability Insurance",
+		"ShortClassCode": "CARR-LIAB'",
+		"CommisionRate": "20.0"
+	},
+	{
+		"id": 9,
+		"ClassOfPolicy": "Computer (Machinery Breakdown) Insurance",
+		"ShortClassCode": "COM-MACH.",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 10,
+		"ClassOfPolicy": "Consequential Loss (Fire, etc.) Insurance",
+		"ShortClassCode": "CON.LOSS-FIRE",
+		"CommisionRate": "25.0"
+	},
+	{
+		"id": 11,
+		"ClassOfPolicy": "Consequential Loss (Machinery Breakdown)",
+		"ShortClassCode": "CON.LOSS-MB",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 12,
+		"ClassOfPolicy": "Contractors All Risks",
+		"ShortClassCode": "C.A/RISK",
+		"CommisionRate": "20.0"
+	},
+	{
+		"id": 13,
+		"ClassOfPolicy": "Customs Bond",
+		"ShortClassCode": "C/BOND",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 14,
+		"ClassOfPolicy": "Domestic Package",
+		"ShortClassCode": "D/PACKAGE",
+		"CommisionRate": "20.0"
+	},
+	{
+		"id": 15,
+		"ClassOfPolicy": "Domestic Package - H.A.I.I",
+		"ShortClassCode": "D/PACK.HAII",
+		"CommisionRate": "20.0"
+	},
+	{
+		"id": 16,
+		"ClassOfPolicy": "Earthquake And Special Perils",
+		"ShortClassCode": "EARTHQUAKE",
+		"CommisionRate": "20.0"
+	},
+	{
+		"id": 17,
+		"ClassOfPolicy": "Electronic Equipment - Computers",
+		"ShortClassCode": "COMPUTER",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 18,
+		"ClassOfPolicy": "Employers' Liability (Comm. Law)",
+		"ShortClassCode": "EMP/LIAB",
+		"CommisionRate": "20.0"
+	},
+	{
+		"id": 19,
+		"ClassOfPolicy": "Erection All Risks",
+		"ShortClassCode": "ER/ALLRISKS",
+		"CommisionRate": "20.0"
+	},
+	{
+		"id": 20,
+		"ClassOfPolicy": "Fidelity Guarantee",
+		"ShortClassCode": "F/Guarantee",
+		"CommisionRate": "20.0"
+	},
+	{
+		"id": 21,
+		"ClassOfPolicy": "Fire & Perils",
+		"ShortClassCode": "FIRE/PERILS",
+		"CommisionRate": "25.0"
+	},
+	{
+		"id": 22,
+		"ClassOfPolicy": "Fire Industrial - Earthquake & Special Perils",
+		"ShortClassCode": "FIRE-IND",
+		"CommisionRate": "25.0"
+	},
+	{
+		"id": 23,
+		"ClassOfPolicy": "Forklift (S)",
+		"ShortClassCode": "FORKLIFT",
+		"CommisionRate": "20.0"
+	},
+	{
+		"id": 24,
+		"ClassOfPolicy": "Golfers/Clubman's Policy",
+		"ShortClassCode": "GOLF",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 25,
+		"ClassOfPolicy": "Goods In Transit Insurance",
+		"ShortClassCode": "G.I.T",
+		"CommisionRate": "17.5"
+	},
+	{
+		"id": 26,
+		"ClassOfPolicy": "Group Last Expense Protection",
+		"ShortClassCode": "G.L.E.P",
+		"CommisionRate": "0.0"
+	},
+	{
+		"id": 27,
+		"ClassOfPolicy": "Group Life Assurance & Personal Accident",
+		"ShortClassCode": "G.L.A.P",
+		"CommisionRate": "20.0"
+	},
+	{
+		"id": 28,
+		"ClassOfPolicy": "Group Life Assurance Scheme",
+		"ShortClassCode": "G.L.A.S",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 29,
+		"ClassOfPolicy": "Group Personal Accident Insurance",
+		"ShortClassCode": "G.P.A.I",
+		"CommisionRate": "20.0"
+	},
+	{
+		"id": 30,
+		"ClassOfPolicy": "Immigration Security Bond",
+		"ShortClassCode": "S/BOND",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 31,
+		"ClassOfPolicy": "Industrial All Risks",
+		"ShortClassCode": "I.A/RISK",
+		"CommisionRate": "25.0"
+	},
+	{
+		"id": 32,
+		"ClassOfPolicy": "Legal & Contractual Liability",
+		"ShortClassCode": "L&C/LIABILITY",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 33,
+		"ClassOfPolicy": "Machinery Breakdown",
+		"ShortClassCode": "MACH/DOWN",
+		"CommisionRate": "20.0"
+	},
+	{
+		"id": 34,
+		"ClassOfPolicy": "Marine Certificate",
+		"ShortClassCode": "MARINE",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 35,
+		"ClassOfPolicy": "Marine Hull & Liability",
+		"ShortClassCode": "M/HULL",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 36,
+		"ClassOfPolicy": "Marine Open Cover",
+		"ShortClassCode": "M/CARGO",
+		"CommisionRate": "0.0"
+	},
+	{
+		"id": 37,
+		"ClassOfPolicy": "Marine Transit Insurance",
+		"ShortClassCode": "M/TRANSIT",
+		"CommisionRate": "17.5"
+	},
+	{
+		"id": 38,
+		"ClassOfPolicy": "Medical Insurance",
+		"ShortClassCode": "MEDICAL",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 39,
+		"ClassOfPolicy": "Medical Malpractice",
+		"ShortClassCode": "MEDICAL-MAL",
+		"CommisionRate": "20.0"
+	},
+	{
+		"id": 40,
+		"ClassOfPolicy": "Micro Property Insurance",
+		"ShortClassCode": "MICRO/PROPERTY",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 41,
+		"ClassOfPolicy": "Money Insurance",
+		"ShortClassCode": "MONEY",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 42,
+		"ClassOfPolicy": "Mortgage Protection Insurance",
+		"ShortClassCode": "MORTGAGE",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 43,
+		"ClassOfPolicy": "Motor Commercial Insurance - Other Companies",
+		"ShortClassCode": "MTR/CV",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 44,
+		"ClassOfPolicy": "Motor Commercial Insurance - Phoenix",
+		"ShortClassCode": "MTR/CV",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 45,
+		"ClassOfPolicy": "Motor Commercial - (P.S.V)",
+		"ShortClassCode": "MTR/PSV",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 46,
+		"ClassOfPolicy": "Motor Commercial - (Private Hire)",
+		"ShortClassCode": "MTR/PH",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 47,
+		"ClassOfPolicy": "Motor Commercial - (Special Types)",
+		"ShortClassCode": "MTR/STypes",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 48,
+		"ClassOfPolicy": "Motor Contingent Legal Liability",
+		"ShortClassCode": "MTR/CONT",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 49,
+		"ClassOfPolicy": "Motor Cycles - Pedal and Motor Cycle",
+		"ShortClassCode": "MTR/CYCLE",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 50,
+		"ClassOfPolicy": "Motor Private Insurance - Other Companies",
+		"ShortClassCode": "MTR/PV",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 51,
+		"ClassOfPolicy": "Motor Private Insurance - Phoenix",
+		"ShortClassCode": "MTR/PV",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 52,
+		"ClassOfPolicy": "Motor Trade - Road Risk",
+		"ShortClassCode": "MTRT/ROAD",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 53,
+		"ClassOfPolicy": "Motor Trade - Trade",
+		"ShortClassCode": "MTRT/TRADE",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 54,
+		"ClassOfPolicy": "Motor Trade - External Risks",
+		"ShortClassCode": "MTRT/EXT",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 55,
+		"ClassOfPolicy": "Motor Trade - Forklifts",
+		"ShortClassCode": "MTRT/FORK",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 56,
+		"ClassOfPolicy": "Motor Trade - Internal Risks",
+		"ShortClassCode": "MTRT/INT",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 57,
+		"ClassOfPolicy": "Office Combined Insurance",
+		"ShortClassCode": "OFFICE",
+		"CommisionRate": "25.0"
+	},
+	{
+		"id": 58,
+		"ClassOfPolicy": "Pension Scheme - Trustees Indemnity Policy",
+		"ShortClassCode": "PENSION",
+		"CommisionRate": "0.0"
+	},
+	{
+		"id": 59,
+		"ClassOfPolicy": "Performance Bond Insurance",
+		"ShortClassCode": "P/BOND",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 60,
+		"ClassOfPolicy": "Personal Accident Insurance",
+		"ShortClassCode": "P/ACCIDENT",
+		"CommisionRate": "20.0"
+	},
+	{
+		"id": 61,
+		"ClassOfPolicy": "Plant All-Risk - Third Party Liability",
+		"ShortClassCode": "PLANT.A/RISK/TPL",
+		"CommisionRate": "20.0"
+	},
+	{
+		"id": 62,
+		"ClassOfPolicy": "Plate Glass Insurance",
+		"ShortClassCode": "P/GLASS",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 63,
+		"ClassOfPolicy": "Products Liability Insurance",
+		"ShortClassCode": "PR/LIABILITY",
+		"CommisionRate": "20.0"
+	},
+	{
+		"id": 64,
+		"ClassOfPolicy": "Professional Indemnity",
+		"ShortClassCode": "P/INDEMNITY",
+		"CommisionRate": "20.0"
+	},
+	{
+		"id": 65,
+		"ClassOfPolicy": "Public & Products Liability",
+		"ShortClassCode": "PU/PR/LIABILITY",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 66,
+		"ClassOfPolicy": "Public Liability ",
+		"ShortClassCode": "PU/LIABILITY",
+		"CommisionRate": "20.0"
+	},
+	{
+		"id": 67,
+		"ClassOfPolicy": "Self-Funded Scheme",
+		"ShortClassCode": "S/FUND/SCHEME",
+		"CommisionRate": "15.0"
+	},
+	{
+		"id": 68,
+		"ClassOfPolicy": "Stock Floater",
+		"ShortClassCode": "S/FLOATER",
+		"CommisionRate": "25.0"
+	},
+	{
+		"id": 69,
+		"ClassOfPolicy": "Student Guard Group Insurance",
+		"ShortClassCode": "STUD/GUA/GRP",
+		"CommisionRate": "20.0"
+	},
+	{
+		"id": 70,
+		"ClassOfPolicy": "Traders Comprehensive Package",
+		"ShortClassCode": "TRAD/COMP",
+		"CommisionRate": "20.0"
+	},
+	{
+		"id": 71,
+		"ClassOfPolicy": "Travel Insurance",
+		"ShortClassCode": "TRAVEL",
+		"CommisionRate": "10.0"
+	},
+	{
+		"id": 72,
+		"ClassOfPolicy": "Work Injury Benefits Insurance",
+		"ShortClassCode": "WIBI",
+		"CommisionRate": "20.0"
+	}
+  ]
+}
