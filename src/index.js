@@ -152,20 +152,20 @@ window.onload = () => {
                             newCell.appendChild(newText);
                             
                             //creating new value text variables to store the form information
-                            let clientNameValueText = document.createTextNode(clientNameValue);
-                            let companyNameValueText = document.createTextNode(companyNameValue);
-                            let clientEmailValueText = document.createTextNode(clientEmailValue);
-                            let clientPhoneValueText = document.createTextNode(clientPhoneValue);
-                            let clientPoBoxValueText = document.createTextNode(clientPoBoxValue);
-                            let clientAddressValueText = document.createTextNode(clientAddressValue);
-                            let clientCityValueText = document.createTextNode(clientCityValue);
-                            let clientCountyValueText = document.createTextNode(clientCountyValue);
-                            let clientClaimReportDateValueText = document.createTextNode(clientClaimReportDateValue);
-                            let clientInsuranceTypeValueText = document.createTextNode(clientInsuranceTypeValue);
-                            let clientClassOfPolicyValueText = document.createTextNode(clientClassOfPolicyValue);
-                            let clientPolicyNumValueText = document.createTextNode(clientPolicyNumValue);
-                            let clientPolicyStartValueText = document.createTextNode(clientPolicyStartValue);
-                            let clientPolicyEndValueText = document.createTextNode(clientPolicyEndValue);
+                            let clientNameValueText = document.createTextNode(`Client Name: ${clientNameValue}.`);
+                            let companyNameValueText = document.createTextNode(`Company Name: ${companyNameValue}.`);
+                            let clientEmailValueText = document.createTextNode(`Email: ${clientEmailValue}.`);
+                            let clientPhoneValueText = document.createTextNode(`Phone: ${clientPhoneValue}.`);
+                            let clientPoBoxValueText = document.createTextNode(`P.O. Box: ${clientPoBoxValue}.`);
+                            let clientAddressValueText = document.createTextNode(`Address: ${clientAddressValue}.`);
+                            let clientCityValueText = document.createTextNode(`City or Town: ${clientCityValue}.`);
+                            let clientCountyValueText = document.createTextNode(`County: ${clientCountyValue}.`);
+                            let clientClaimReportDateValueText = document.createTextNode(`Claim Report Date: ${clientClaimReportDateValue}.`);
+                            let clientInsuranceTypeValueText = document.createTextNode(`Insurance Type: ${clientInsuranceTypeValue}.`);
+                            let clientClassOfPolicyValueText = document.createTextNode(`Class Of Policy: ${clientClassOfPolicyValue}.`);
+                            let clientPolicyNumValueText = document.createTextNode(`Policy Number: ${clientPolicyNumValue}.`);
+                            let clientPolicyStartValueText = document.createTextNode(`Policy Start Date: ${clientPolicyStartValue}.`);
+                            let clientPolicyEndValueText = document.createTextNode(`Policy End Date: ${clientPolicyEndValue}.`);
 
                             //appending the new cells to the rows created
                             newCellClientName.appendChild(clientNameValueText); 
