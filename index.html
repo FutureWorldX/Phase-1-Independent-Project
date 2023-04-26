@@ -5,35 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./src/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">            
     <script src="./src/index.js" defer></script>
     <title>Insurance Data Entry Form</title>
 </head>
 <body>
     <form id="inputForm" action="" method="POST">
-        <h2>Insurance Data Entry Form</h2>
         
-        <label for="clientName">Client Name:</label>
-        <input type="text" id="clientName" name="clientName" required><br>
+        <table>
+            <tr>
+              <td> <h2>Insurance Data Entry Form</h2> </td>
+              <td>
+                <div>
+                    <input type="checkbox" class="checkbox" id="checkbox">
+                    <label for="checkbox" class="checkbox-label">
+                    <i class="fas fa-moon"></i>
+                    <span class="ball"></span>
+                    </label>
+                </div>
+              </td>
+            </tr>
+          </table>
+        
+        <label for="clientName">
+            <input type="text" id="clientName" name="clientName" placeholder=" " required>
+            <span>Client Name:</span> </label> <br>
       
-        <label for="companyName">Company Name:</label>
-        <input type="text" id="companyName" name="companyName" required><br>
+        <label for="companyName">
+            <input type="text" id="companyName" name="companyName" placeholder=" " required>
+        <span>Company Name:</span> </label> <br>
       
-        <label for="email">Email:</label>
+        <label for="email">
         <input type="email" id="email" name="email" required
-            pattern="[^ @]*@[^ @]*.[^ .]"
-            title="Must contain an email address in the format of: name@example.com"><br>
+            pattern="[^ @]*@[^ @]*.[^ .]" placeholder=" "
+            title="Must contain an email address in the format of: name@example.com">
+        <span>Email:</span> </label> <br>
       
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" required><br>
+        <label for="phone">
+        <input type="tel" id="phone" name="phone" placeholder=" " required>
+        <span>Phone:</span> </label> <br>
 
-        <label for="po-box">P.O. Box:</label>
-        <input type="text" id="po-box" name="po-box" required><br>
+        <label for="po-box">
+        <input type="text" id="po-box" name="po-box" placeholder=" " required>
+        <span>P.O. Box:</span> </label> <br>
       
-        <label for="address">Address:</label>
-        <input type="text" id="address" name="address" required><br>
+        <label for="address">
+        <input type="text" id="address" name="address" placeholder=" " required>
+        <span>Address:</span> </label> <br>
       
-        <label for="city">City or Town:</label>
-        <input type="text" id="city" name="city" required><br>
+        <label for="city">
+        <input type="text" id="city" name="city" placeholder=" " required>
+        <span>City or Town:</span> </label> <br>
       
         <!--Loading the Kenyan Country list-->
         <label for="county">County:</label>
@@ -93,7 +115,7 @@
 
         <label for="insuranceType">Insurance Type:</label>
         <select id="insuranceType" name="insuranceType" required>
-          <option selected="true" disabled="disabled" value="">Select insurance type</option>
+          <option selected="true" disabled="disabled" value="">--Select insurance type--</option>
           <option value="auto">Auto/Car Insurance</option>
           <option value="home">Home Insurance</option>
           <option value="health">Health Insurance</option>
@@ -105,8 +127,9 @@
             <option selected="true" disabled="disabled" value="" id="policyClassList" value="">--Select Class Of Policy--</option>
         </select><br>
 
-        <label for="city">Policy Number:</label>
-        <input type="text" id="policyNum" name="policyNum"><br>
+        <label for="policyNumber">
+        <input type="text" id="policyNum" name="policyNum" placeholder=" " required> 
+        <span>Policy Number:</span> </label> <br>
       
         <label for="policyStart">Policy Start Date:</label>
         <input type="date" id="policyStart" name="policyStart" required><br>

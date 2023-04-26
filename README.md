@@ -17,8 +17,10 @@ Developing a web-based data entry form so that the same database can be accessed
 
 ### Minimum Viable Product
 
-1. Preloading Class Of Policy and Commision Rates which are standardized by the Kenya Insurance Regulatory Authority.
+1. Preloading Class Of Policy and Commission Rates which are standardized by the Kenya Insurance Regulatory Authority.
 
 2. The Manager or Administrator users can add, update or delete customer details and the insurer companies based on agency activity.
 
 3. The Insurance Agent can add or update insurance claims and renewal details.
+
+#### [Demo](https://futureworldx.github.io/Phase-1-Independent-Project/ "Insurance Data Entry Form")

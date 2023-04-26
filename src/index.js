@@ -20,13 +20,20 @@ const clientFormButton = document.querySelector("#formSubmit");
 
 window.onload = () => {
     //intializing the ids and classes from the HTML page
+    //light and dark mode toggle
+    const checkbox = document.getElementById("checkbox");
+    checkbox.addEventListener("change", () => {
+        document.body.classList.toggle("dark");
+        clientForm.classList.toggle("dark");
+    });
+
     //navbar: class of ui centered grid
     const policyList = document.querySelector("#policyClassName"); //list item in the policy dropdown
 
         //loading data from the json file
         async function getResponse() {
             //using the provided url for GET API and the async function
-            const dbUrl = "http://localhost:3000/policy/";
+            const dbUrl = "https://my-json-server.typicode.com/FutureWorldX/Phase-1-Independent-Project/policy/";
             const response = await fetch(dbUrl);
     
             //using this to get the entire data list
