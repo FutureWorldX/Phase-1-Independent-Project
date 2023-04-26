@@ -11,6 +11,7 @@ const clientCity = document.querySelector("#city");
 const clientCounty = document.querySelector("#county");
 const clientClaimReportDate = document.querySelector("#claimReportDate");
 const clientInsuranceType = document.querySelector("#insuranceType");
+const clientClassOfPolicy = document.querySelector("#policyClassName");
 const clientPolicyNum = document.querySelector("#policyNum");
 const clientPolicyStart = document.querySelector("#policyStart");
 const clientPolicyEnd = document.querySelector("#policyEnd");
@@ -52,7 +53,27 @@ window.onload = () => {
 
                         //event listener for the form submit button
                         clientFormButton.addEventListener('click', function handleClick(event) {
-                        
+                            //overriding the default form operations
+                            event.preventDefault(); 
+                            event.stopPropagation();
+
+                            // check if JavaScript found a null/blank empty field in the form
+                            let formElements = clientForm.querySelectorAll('input, email, text, textarea, date, tel, select');
+                            // find if any of them are empty 
+                            let findEmpty = Array.from(formElements).find((element) => {
+                                if(element.value.length > 0) {
+                                    return false; //proceed because element is not blank
+                               } else {
+                                return true; // set findEmpty to true because value inputs are of 0 length
+                               }
+                            });       
+                            
+                            if(findEmpty){
+                                // if so, alert with the error
+                                alert(`Kindly check the ${findEmpty.name} input in the form.`);
+                            } else {
+                                // if is it not empty, submit the HTML form
+
                             //create a temporary table that fills in with data when submit button is clicked
                             let tblClientDiv = document.createElement('div');
                             let tblClient = document.createElement("table");
@@ -87,6 +108,7 @@ window.onload = () => {
                             const clientCountyValue = clientCounty.value;
                             const clientClaimReportDateValue = clientClaimReportDate.value;
                             const clientInsuranceTypeValue = clientInsuranceType.value;
+                            const clientClassOfPolicyValue = clientClassOfPolicy.value;
                             const clientPolicyNumValue = clientPolicyNum.value;
                             const clientPolicyStartValue = clientPolicyStart.value;
                             const clientPolicyEndValue = clientPolicyEnd.value;
@@ -103,6 +125,7 @@ window.onload = () => {
                             let rowClientCounty = tblClient.insertRow();
                             let rowClientClaimReportDate = tblClient.insertRow();
                             let rowClientInsuranceType = tblClient.insertRow();
+                            let rowClientClassOfPolicy = tblClient.insertRow();
                             let rowClientPolicyNum = tblClient.insertRow();
                             let rowClientPolicyStart = tblClient.insertRow();
                             let rowClientPolicyEnd = tblClient.insertRow();
@@ -117,8 +140,9 @@ window.onload = () => {
                             let newCellClientAddress = rowClientAddress.insertCell();
                             let newCellClientCity = rowClientCity.insertCell();
                             let newCellClientCounty = rowClientCounty.insertCell();
-                            let newCellClientClaimReportDate = rowClientCounty.insertCell();
+                            let newCellClientClaimReportDate = rowClientClaimReportDate.insertCell();
                             let newCellClientInsuranceType = rowClientInsuranceType.insertCell();
+                            let newCellClientClassOfPolicy = rowClientClassOfPolicy.insertCell();
                             let newCellClientPolicyNum = rowClientPolicyNum.insertCell();
                             let newCellClientPolicyStart = rowClientPolicyStart.insertCell();
                             let newCellClientPolicyEnd = rowClientPolicyEnd.insertCell();
@@ -126,19 +150,39 @@ window.onload = () => {
                             // Append a text node to the cell
                             let newText = document.createTextNode('A new Text row has been created.');
                             newCell.appendChild(newText);
-                            newCellClientName.appendChild(clientNameValue);
-                            newCellCompanyName.appendChild(companyNameValue);
-                            newCellClientEmail.appendChild(clientEmailValue);
-                            newCellClientPhone.appendChild(clientPhoneValue);
-                            newCellClientPoBox.appendChild(clientPoBoxValue);
-                            newCellClientAddress.appendChild(clientAddressValue);
-                            newCellClientCity.appendChild(clientCityValue);
-                            newCellClientCounty.appendChild(clientCountyValue);
-                            newCellClientClaimReportDate.appendChild(clientInsuranceTypeValue);
-                            newCellClientInsuranceType.appendChild(clientClaimReportDateValue);
-                            newCellClientPolicyNum.appendChild(clientPolicyNumValue);
-                            newCellClientPolicyStart.appendChild(clientPolicyStartValue);
-                            newCellClientPolicyEnd.appendChild(clientPolicyEndValue);
+                            
+                            //creating new value text variables to store the form information
+                            let clientNameValueText = document.createTextNode(clientNameValue);
+                            let companyNameValueText = document.createTextNode(companyNameValue);
+                            let clientEmailValueText = document.createTextNode(clientEmailValue);
+                            let clientPhoneValueText = document.createTextNode(clientPhoneValue);
+                            let clientPoBoxValueText = document.createTextNode(clientPoBoxValue);
+                            let clientAddressValueText = document.createTextNode(clientAddressValue);
+                            let clientCityValueText = document.createTextNode(clientCityValue);
+                            let clientCountyValueText = document.createTextNode(clientCountyValue);
+                            let clientClaimReportDateValueText = document.createTextNode(clientClaimReportDateValue);
+                            let clientInsuranceTypeValueText = document.createTextNode(clientInsuranceTypeValue);
+                            let clientClassOfPolicyValueText = document.createTextNode(clientClassOfPolicyValue);
+                            let clientPolicyNumValueText = document.createTextNode(clientPolicyNumValue);
+                            let clientPolicyStartValueText = document.createTextNode(clientPolicyStartValue);
+                            let clientPolicyEndValueText = document.createTextNode(clientPolicyEndValue);
+
+                            //appending the new cells to the rows created
+                            newCellClientName.appendChild(clientNameValueText); 
+                            newCellCompanyName.appendChild(companyNameValueText);
+                            newCellClientEmail.appendChild(clientEmailValueText);
+                            newCellClientPhone.appendChild(clientPhoneValueText);
+                            newCellClientPoBox.appendChild(clientPoBoxValueText);
+                            newCellClientAddress.appendChild(clientAddressValueText);
+                            newCellClientCity.appendChild(clientCityValueText);
+                            newCellClientCounty.appendChild(clientCountyValueText);
+                            newCellClientClaimReportDate.appendChild(clientClaimReportDateValueText);
+                            newCellClientInsuranceType.appendChild(clientInsuranceTypeValueText);
+                            newCellClientClassOfPolicy.appendChild(clientClassOfPolicyValueText);
+                            newCellClientPolicyNum.appendChild(clientPolicyNumValueText);
+                            newCellClientPolicyStart.appendChild(clientPolicyStartValueText);
+                            newCellClientPolicyEnd.appendChild(clientPolicyEndValueText);
+                        } //closing if else statement to check if form is not empty
 
                         }); //closing the event listener when the form button is clicked
 
