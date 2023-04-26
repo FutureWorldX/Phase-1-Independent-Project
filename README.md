@@ -9,11 +9,11 @@
 
 ## Introduction
 #### Description and Problem Statement
-* Small to medium sized insurance agencies may often rely on Microsoft Excel and Access files for entering client data. The data that these insurance agents fill can be categorized into Insurance Registry, Claims Registry, Underwriting, Accounting information and Reports.
-* However these files may only be open one at a time by one agent on one PC in the agency, and the document file must first be closed by one agent before another agent in the insurance agency can get a chance to edit the file. Also, there might be several copies of the file which makes it hard to track down customer information. 
+* Small to medium-sized insurance agencies often rely on Microsoft Excel and Access files for entering client data. The data that these insurance agents fill can be categorized into Insurance Registry, Claims Registry, Underwriting, Accounting Information and Reports. 
+* However, these files may only be opened one at a time by one agent on one PC in the agency. This means that the document file must first be closed by one agent before another agent in the insurance agency can get a chance to edit the file. Also, there might be several copies of the file which makes it hard to track down customer information. 
 
 ## Getting Started
-Developing a web based data entry form so that the same database can be accessed and shared among multiple staff members in the insurance agency. A logbook or version history can also be tracked via date and time when changes are made to the database.
+Developing a web-based data entry form so that the same database can be accessed and shared among multiple staff members within an insurance agency. A logbook or version history can also be tracked via date and time when changes are made to the database.
 
 ### Minimum Viable Product
 
