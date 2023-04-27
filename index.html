@@ -10,6 +10,8 @@
     <title>Insurance Data Entry Form</title>
 </head>
 <body>
+  <div id="loader"></div>
+  <section class="secForm">
     <form id="inputForm" action="" method="POST">
         
         <table>
@@ -31,9 +33,9 @@
             <input type="text" id="clientName" name="clientName" placeholder=" " required>
             <span>Client Name:</span> </label> <br>
       
-        <label for="companyName">
-            <input type="text" id="companyName" name="companyName" placeholder=" " required>
-        <span>Company Name:</span> </label> <br>
+        <label for="taxKRAPin">
+            <input type="text" id="taxKRAPin" name="taxKRAPin" placeholder=" " maxlength="20" required>
+        <span>KRA PIN Number:</span> </label> <br>
       
         <label for="email">
         <input type="email" id="email" name="email" required
@@ -42,7 +44,7 @@
         <span>Email:</span> </label> <br>
       
         <label for="phone">
-        <input type="tel" id="phone" name="phone" placeholder=" " required>
+        <input type="tel" id="phone" name="phone" placeholder=" " maxlength="20" required>
         <span>Phone:</span> </label> <br>
 
         <label for="po-box">
@@ -110,8 +112,8 @@
             <option value="Nairobi">Nairobi</option>
         </select><br>
 
-        <label for="claimReportDate">Claim Report Date:</label>
-        <input type="date" id="claimReportDate" name="claimReportDate" required><br>
+        <label for="clientInfoReportDate">Client Info Report Date:</label>
+        <input type="date" id="clientInfoReportDate" name="clientInfoReportDate" required><br>
 
         <label for="insuranceType">Insurance Type:</label>
         <select id="insuranceType" name="insuranceType" required>
@@ -139,6 +141,51 @@
       
         <input type="submit" id="formSubmit" value="Submit">
       </form>
+    </section>
+
+    <section class="secInfo">  
+
+      <h2>Insurance Client Details</h2>
+      
+      <table class="tableInfo">
+
+          <tr>
+            <th>Client DB ID</th>
+            <th>Client Name</th>
+            <th>KRA PIN Number</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>P.O. Box</th>
+            <th>Address</th>
+            <th>City or Town</th>
+            <th>County</th>
+            <th>Info Report Date</th>
+            <th>Insurance Type</th>
+            <th>Class Of Policy</th>
+            <th>Policy Number</th>
+            <th>Policy Start Date</th>
+            <th>Policy End Date</th>
+          </tr>
+          <tr>
+            <td id="tdClientId"></td>
+            <td id="tdClientName"></td>
+            <td id="tdTaxKRAPin"></td>
+            <td id="tdEmail"></td>
+            <td id="tdPhone"></td>
+            <td id="tdPoBox"></td>
+            <td id="tdAddress"></td>
+            <td id="tdCity"></td>
+            <td id="tdCounty"></td>
+            <td id="tdClientInfoReportDate"></td>
+            <td id="tdInsuranceType"></td>
+            <td id="tdPolicyClassName"></td>
+            <td id="tdPolicyNum"></td>
+            <td id="tdPolicyStart"></td>
+            <td id="tdPolicyEnd"></td>
+          </tr>
+        </table>
+
+    </section>
      
 </body>
 </html>

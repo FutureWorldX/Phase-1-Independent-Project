@@ -2,14 +2,14 @@
 
 //loading existing HTML elements to this JS file
 const clientName = document.querySelector("#clientName");
-const companyName = document.querySelector("#companyName");
+const clientTaxKRAPin = document.querySelector("#taxKRAPin");
 const clientEmail = document.querySelector("#email");
 const clientPhone = document.querySelector("#phone");
 const clientPoBox = document.querySelector("#po-box");
 const clientAddress = document.querySelector("#address");
 const clientCity = document.querySelector("#city");
 const clientCounty = document.querySelector("#county");
-const clientClaimReportDate = document.querySelector("#claimReportDate");
+const clientInfoReportDate = document.querySelector("#clientInfoReportDate");
 const clientInsuranceType = document.querySelector("#insuranceType");
 const clientClassOfPolicy = document.querySelector("#policyClassName");
 const clientPolicyNum = document.querySelector("#policyNum");
@@ -17,6 +17,25 @@ const clientPolicyStart = document.querySelector("#policyStart");
 const clientPolicyEnd = document.querySelector("#policyEnd");
 const clientForm = document.querySelector("#inputForm");
 const clientFormButton = document.querySelector("#formSubmit");
+const loadingSpinner = document.querySelector("#loader");
+
+//loading the Insurance Client Information table
+const tblTableClientInfo = document.querySelector(".tableInfo");
+const tblClientId = document.querySelector("#tdClientId");
+const tblClientName = document.querySelector("#tdClientName");
+const tblCompanyName = document.querySelector("#tdTaxKRAPin");
+const tblClientEmail = document.querySelector("#tdEmail");
+const tblClientPhone = document.querySelector("#tdPhone");
+const tblClientPoBox = document.querySelector("#tdPoBox");
+const tblClientAddress = document.querySelector("#tdAddress");
+const tblClientCity = document.querySelector("#tdCity");
+const tblClientCounty = document.querySelector("#tdCounty");
+const tblclientInfoReportDate = document.querySelector("#tdClientInfoReportDate");
+const tblClientInsuranceType = document.querySelector("#tdInsuranceType");
+const tblClientClassOfPolicy = document.querySelector("#tdPolicyClassName");
+const tblClientPolicyNum = document.querySelector("#tdPolicyNum");
+const tblClientPolicyStart = document.querySelector("#tdPolicyStart");
+const tblClientPolicyEnd = document.querySelector("#tdPolicyEnd");
 
 window.onload = () => {
     //intializing the ids and classes from the HTML page
@@ -25,6 +44,7 @@ window.onload = () => {
     checkbox.addEventListener("change", () => {
         document.body.classList.toggle("dark");
         clientForm.classList.toggle("dark");
+        tblTableClientInfo.classList.toggle("dark");
     });
 
     //navbar: class of ui centered grid
@@ -35,16 +55,22 @@ window.onload = () => {
             //using the provided url for GET API and the async function
             const dbUrl = "https://my-json-server.typicode.com/FutureWorldX/Phase-1-Independent-Project/policy/";
             const response = await fetch(dbUrl);
+            const clientDbUrl = "https://my-json-server.typicode.com/FutureWorldX/Phase-1-Independent-Project/clients/";
+            const clientDbResponse = await fetch(clientDbUrl);
     
             //using this to get the entire data list
             if (!response.ok) {
                 throw new Error(`The response is empty. Please try the request again. HTTP error with the status: ${response.status}`);
             } else {
                 const policyData = await response.json(); // Extracting the data as a JSON Object from the response
+                const clientData = await clientDbResponse.json(); // Extracting the data as a JSON Object from the response
             
                 // a try catch code block to get errors
                 try {
                     if (policyData.length > 0) {
+
+                        //hiding the loading spinner as defined in the CSS file
+                        loadingSpinner.style.display = "none";
                         
                         //making sure that the data is loaded before the page loads with the final information
                         policyData.forEach(function(item) { 
@@ -57,6 +83,27 @@ window.onload = () => {
                             policyList.appendChild(policyItem);
                            
                         }); //closing the forEach command when listing Policy classes
+
+                        //adding to the client details table
+                        if(clientData.length > 0) {
+                            clientData.forEach(function(clientItem) {
+                                const dataRow = document.createElement('tr');
+                                //console.log(clientItem);
+                                 for (let item in clientItem) {
+                                    const dataCell = document.createElement('td');
+                                    //loading the value using clientItem[item] from JSON instead of item
+                                    dataCell.textContent = clientItem[item]; 
+                                    //adding the cell of clientItem[item] to the data row
+                                    dataRow.appendChild(dataCell);
+                                };
+                                  //adding the rows to the table 
+                                  tblTableClientInfo.appendChild(dataRow);
+                            }
+                            
+                            ); //closing the forEach function when listing clients
+                            //tblTableClientInfo.appendChild(tblClientName);
+
+                        } //closing the if else when clientData is greater than 0
 
                         //event listener for the form submit button
                         clientFormButton.addEventListener('click', function handleClick(event) {
@@ -81,39 +128,16 @@ window.onload = () => {
                             } else {
                                 // if is it not empty, submit the HTML form
 
-                            //create a temporary table that fills in with data when submit button is clicked
-                            let tblClientDiv = document.createElement('div');
-                            let tblClient = document.createElement("table");
-
-                            //styling the div which holds the table
-                            tblClientDiv.style.display = "flex";
-                            tblClientDiv.style.margin = "0 auto";
-                            tblClientDiv.style.justifyContent = "center";
-                            tblClientDiv.style.alignItems = "center";
-                            tblClientDiv.style.textAlign = "center";
-                            tblClientDiv.style.overflow = "auto";
-
-                            //styling the table
-                            tblClient.style.fontFamily = "Arial, sans-serif";
-                            tblClient.style.backgroundColor = "mintcream";
-                            tblClient.style.padding = "10px";
-                            tblClient.style.border = "1px solid #ccc";
-                            tblClient.style.borderRadius = "5px";
-                            
-                            //appending the new div and table to the HTML document body
-                            tblClientDiv.appendChild(tblClient);
-                            document.body.appendChild(tblClientDiv);
-
                             //loading values of HTML Form elements
                             const clientNameValue = clientName.value;
-                            const companyNameValue = companyName.value;
+                            const clientTaxKraValue = clientTaxKRAPin.value;
                             const clientEmailValue = clientEmail.value;
                             const clientPhoneValue = clientPhone.value;
                             const clientPoBoxValue = clientPoBox.value;
                             const clientAddressValue = clientAddress.value;
                             const clientCityValue = clientCity.value;
                             const clientCountyValue = clientCounty.value;
-                            const clientClaimReportDateValue = clientClaimReportDate.value;
+                            const clientInfoReportDateValue = clientInfoReportDate.value;
                             const clientInsuranceTypeValue = clientInsuranceType.value;
                             const clientClassOfPolicyValue = clientClassOfPolicy.value;
                             const clientPolicyNumValue = clientPolicyNum.value;
@@ -121,69 +145,55 @@ window.onload = () => {
                             const clientPolicyEndValue = clientPolicyEnd.value;
                             
                             // Insert a row at the end of the table
-                            let newRow = tblClient.insertRow();
-                            let rowClientName = tblClient.insertRow();
-                            let rowCompanyName = tblClient.insertRow();
-                            let rowClientEmail = tblClient.insertRow();
-                            let rowClientPhone = tblClient.insertRow();
-                            let rowClientPoBox = tblClient.insertRow();
-                            let rowClientAddress = tblClient.insertRow();
-                            let rowClientCity = tblClient.insertRow();
-                            let rowClientCounty = tblClient.insertRow();
-                            let rowClientClaimReportDate = tblClient.insertRow();
-                            let rowClientInsuranceType = tblClient.insertRow();
-                            let rowClientClassOfPolicy = tblClient.insertRow();
-                            let rowClientPolicyNum = tblClient.insertRow();
-                            let rowClientPolicyStart = tblClient.insertRow();
-                            let rowClientPolicyEnd = tblClient.insertRow();
+                            let newRow = tblTableClientInfo.insertRow();
 
                             // Insert a cell at the end of the row
                             let newCell = newRow.insertCell();
-                            let newCellClientName = rowClientName.insertCell();
-                            let newCellCompanyName = rowCompanyName.insertCell();
-                            let newCellClientEmail = rowClientEmail.insertCell();
-                            let newCellClientPhone = rowClientPhone.insertCell();
-                            let newCellClientPoBox = rowClientPoBox.insertCell();
-                            let newCellClientAddress = rowClientAddress.insertCell();
-                            let newCellClientCity = rowClientCity.insertCell();
-                            let newCellClientCounty = rowClientCounty.insertCell();
-                            let newCellClientClaimReportDate = rowClientClaimReportDate.insertCell();
-                            let newCellClientInsuranceType = rowClientInsuranceType.insertCell();
-                            let newCellClientClassOfPolicy = rowClientClassOfPolicy.insertCell();
-                            let newCellClientPolicyNum = rowClientPolicyNum.insertCell();
-                            let newCellClientPolicyStart = rowClientPolicyStart.insertCell();
-                            let newCellClientPolicyEnd = rowClientPolicyEnd.insertCell();
+                            let newCellClientName = newRow.insertCell();
+                            let newCellTaxKraPin = newRow.insertCell();
+                            let newCellClientEmail = newRow.insertCell();
+                            let newCellClientPhone = newRow.insertCell();
+                            let newCellClientPoBox = newRow.insertCell();
+                            let newCellClientAddress = newRow.insertCell();
+                            let newCellClientCity = newRow.insertCell();
+                            let newCellClientCounty = newRow.insertCell();
+                            let newCellclientInfoReportDate = newRow.insertCell();
+                            let newCellClientInsuranceType = newRow.insertCell();
+                            let newCellClientClassOfPolicy = newRow.insertCell();
+                            let newCellClientPolicyNum = newRow.insertCell();
+                            let newCellClientPolicyStart = newRow.insertCell();
+                            let newCellClientPolicyEnd = newRow.insertCell();
 
                             // Append a text node to the cell
-                            let newText = document.createTextNode('A new Text row has been created.');
+                            let newText = document.createTextNode('new');
                             newCell.appendChild(newText);
                             
                             //creating new value text variables to store the form information
-                            let clientNameValueText = document.createTextNode(`Client Name: ${clientNameValue}.`);
-                            let companyNameValueText = document.createTextNode(`Company Name: ${companyNameValue}.`);
-                            let clientEmailValueText = document.createTextNode(`Email: ${clientEmailValue}.`);
-                            let clientPhoneValueText = document.createTextNode(`Phone: ${clientPhoneValue}.`);
-                            let clientPoBoxValueText = document.createTextNode(`P.O. Box: ${clientPoBoxValue}.`);
-                            let clientAddressValueText = document.createTextNode(`Address: ${clientAddressValue}.`);
-                            let clientCityValueText = document.createTextNode(`City or Town: ${clientCityValue}.`);
-                            let clientCountyValueText = document.createTextNode(`County: ${clientCountyValue}.`);
-                            let clientClaimReportDateValueText = document.createTextNode(`Claim Report Date: ${clientClaimReportDateValue}.`);
-                            let clientInsuranceTypeValueText = document.createTextNode(`Insurance Type: ${clientInsuranceTypeValue}.`);
-                            let clientClassOfPolicyValueText = document.createTextNode(`Class Of Policy: ${clientClassOfPolicyValue}.`);
-                            let clientPolicyNumValueText = document.createTextNode(`Policy Number: ${clientPolicyNumValue}.`);
-                            let clientPolicyStartValueText = document.createTextNode(`Policy Start Date: ${clientPolicyStartValue}.`);
-                            let clientPolicyEndValueText = document.createTextNode(`Policy End Date: ${clientPolicyEndValue}.`);
+                            let clientNameValueText = document.createTextNode(clientNameValue);
+                            let clientTaxKraPinValueText = document.createTextNode(clientTaxKraValue);
+                            let clientEmailValueText = document.createTextNode(clientEmailValue);
+                            let clientPhoneValueText = document.createTextNode(clientPhoneValue);
+                            let clientPoBoxValueText = document.createTextNode(clientPoBoxValue);
+                            let clientAddressValueText = document.createTextNode(clientAddressValue);
+                            let clientCityValueText = document.createTextNode(clientCityValue);
+                            let clientCountyValueText = document.createTextNode(clientCountyValue);
+                            let clientInfoReportDateValueText = document.createTextNode(clientInfoReportDateValue);
+                            let clientInsuranceTypeValueText = document.createTextNode(clientInsuranceTypeValue);
+                            let clientClassOfPolicyValueText = document.createTextNode(clientClassOfPolicyValue);
+                            let clientPolicyNumValueText = document.createTextNode(clientPolicyNumValue);
+                            let clientPolicyStartValueText = document.createTextNode(clientPolicyStartValue);
+                            let clientPolicyEndValueText = document.createTextNode(clientPolicyEndValue);
 
                             //appending the new cells to the rows created
                             newCellClientName.appendChild(clientNameValueText); 
-                            newCellCompanyName.appendChild(companyNameValueText);
+                            newCellTaxKraPin.appendChild(clientTaxKraPinValueText);
                             newCellClientEmail.appendChild(clientEmailValueText);
                             newCellClientPhone.appendChild(clientPhoneValueText);
                             newCellClientPoBox.appendChild(clientPoBoxValueText);
                             newCellClientAddress.appendChild(clientAddressValueText);
                             newCellClientCity.appendChild(clientCityValueText);
                             newCellClientCounty.appendChild(clientCountyValueText);
-                            newCellClientClaimReportDate.appendChild(clientClaimReportDateValueText);
+                            newCellclientInfoReportDate.appendChild(clientInfoReportDateValueText);
                             newCellClientInsuranceType.appendChild(clientInsuranceTypeValueText);
                             newCellClientClassOfPolicy.appendChild(clientClassOfPolicyValueText);
                             newCellClientPolicyNum.appendChild(clientPolicyNumValueText);

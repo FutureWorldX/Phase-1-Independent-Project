@@ -1,11 +1,57 @@
 /*CSS Styles File*/
 
+* {  
+  font-family: Arial, sans-serif; 
+}
+
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3d3d3d88;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
 body {
   background-color: #fff;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   min-height: 100vh;
   margin: 0;
   transition: background 0.2s linear;
@@ -54,6 +100,7 @@ body.dark {
 
 form.dark {
   background-color: #3d3d3d;
+  color: gray;
 }
 
 form {
@@ -63,7 +110,6 @@ form {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-family: Arial, sans-serif;
 }
 
 h2 {
@@ -98,7 +144,6 @@ select {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
-  font-family: Arial, sans-serif;
 }
 
 input[type="date"] {
@@ -108,7 +153,6 @@ input[type="date"] {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
-  font-family: Arial, sans-serif;
 }
 
 input[type="submit"] {
@@ -119,9 +163,41 @@ input[type="submit"] {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  font-family: Arial, sans-serif;
 }
 
 input[type="submit"]:hover {
   background-color: #45a049;
+}
+
+.secForm {
+  float: left;
+  margin: 0 1%;
+  width: 20%;
+}
+
+.secInfo {
+  float: right;
+  margin: 0 1%;
+  width: 70%;
+}
+
+.tableInfo {
+  background-color: mintcream;
+  margin: 0 auto;
+  padding: 1px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  font-size:  80%;
+}
+
+.tableInfo td {
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  word-wrap: break-word;
+  white-space: break-spaces;
+}
+
+.tableInfo.dark {
+  background-color: #3d3d3d;
+  color: gray;
 }

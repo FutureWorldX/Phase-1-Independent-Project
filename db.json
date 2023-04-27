@@ -95,7 +95,7 @@
       {
         "id": 1,
         "clientName": "A. N. Other",
-        "clientCompanyName": "Username",
+        "clientTaxKRAPin": "ANO",
         "clientEmail": "username@example.com",
         "clientPhone": "0",
         "clientPoBox": "P.O Box 0, 00000",
@@ -112,7 +112,7 @@
       {
         "id": 2,
         "clientName": "John Doe",
-        "clientCompanyName": "JD",
+        "clientTaxKRAPin": "JD",
         "clientEmail": "john.doe@example.com",
         "clientPhone": "2540000000",
         "clientPoBox": "P.O Box 0, 00000",
@@ -129,7 +129,7 @@
       {
         "id": 3,
         "clientName": "Jane Doe",
-        "clientCompanyName": "JD",
+        "clientTaxKRAPin": "JD",
         "clientEmail": "jane.doe@example.com",
         "clientPhone": "2550000000",
         "clientPoBox": "P.O Box 0, 00000",
